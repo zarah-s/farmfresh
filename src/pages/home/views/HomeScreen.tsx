@@ -4,6 +4,7 @@ import Intro from "./components/Intro";
 import Brands from "./components/Brands";
 import About from "./components/About";
 import Footer from "../../../common/components/footer/Footer";
+import Recipies from "./components/Recipies";
 
 const HomeScreen = () => {
   return (
@@ -13,6 +14,7 @@ const HomeScreen = () => {
         <Intro />
       </div>
       <Brands />
+      <Recipies />
       <About />
       <Footer />
     </div>

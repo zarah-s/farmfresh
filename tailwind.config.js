@@ -13,6 +13,7 @@ module.exports = {
       "primary-transparent": "#39889769"
 
     },
+
   },
   plugins: [],
 }

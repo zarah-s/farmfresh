@@ -1,9 +1,11 @@
 const home = "/";
+const about = "/about";
 
 
 
 const RoutesPath = {
     home,
+    about
 
 }
 

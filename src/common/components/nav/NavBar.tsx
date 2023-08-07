@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import Assets from "../../../assets";
-const NavBar = () => {
+import RoutesPath from "../../../constants/Routes";
+
+const NavBar = ({ activeTab }: { activeTab: string }) => {
   return (
     <div className="bg-[#45a3af] fixed top-0 w-full z-50">
       <div className="container mx-auto px-20">
@@ -11,29 +14,54 @@ const NavBar = () => {
           />
           <ul className="flex items-center gap-10">
             <li>
-              <a href="#" className="font-[700] text-lg text-white">
+              <Link
+                to={RoutesPath.home}
+                className={`${
+                  activeTab === "Home" ? "font-[700]" : "font-[400]"
+                } text-lg text-white`}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="font-[400] text-lg text-white">
+              <Link
+                to="#"
+                className={`${
+                  activeTab === "Assortments" ? "font-[700]" : "font-[400]"
+                } text-lg text-white`}
+              >
                 Assortments
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="font-[400] text-lg text-white">
+              <Link
+                to="#"
+                className={`${
+                  activeTab === "Blogs" ? "font-[700]" : "font-[400]"
+                } text-lg text-white`}
+              >
                 Blogs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="font-[400] text-lg text-white">
+              <Link
+                to={RoutesPath.about}
+                className={`${
+                  activeTab === "About" ? "font-[700]" : "font-[400]"
+                } text-lg text-white`}
+              >
                 About Farmfresh
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="font-[400] text-lg text-white">
+              <Link
+                to="#"
+                className={`${
+                  activeTab === "Contact" ? "font-[700]" : "font-[400]"
+                } text-lg text-white`}
+              >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

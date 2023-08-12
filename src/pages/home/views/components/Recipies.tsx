@@ -1,9 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Assets from "../../../../assets";
 const Recipies = () => {
   const splideRef = useRef<Splide | null>(null); // Add TypeScript type annotation
+
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+
+  const handleScreenWidthChange = () => {
+    setScreenWidth(window.innerWidth);
+    // Perform any actions or updates based on the screen width change
+  };
+
+  useEffect(() => {
+    // Event listener for screen resize
+    window.addEventListener("resize", handleScreenWidthChange);
+
+    return () => {
+      // Cleanup the event listener when the component unmounts
+      window.removeEventListener("resize", handleScreenWidthChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (splideRef.current) {
@@ -19,7 +36,7 @@ const Recipies = () => {
     }
   }, []);
   return (
-    <div className="mt-20">
+    <div id="recipies" className="mt-20">
       <h1 className="text-2xl text-primary text-center font-semibold">
         Recipies
       </h1>
@@ -31,7 +48,7 @@ const Recipies = () => {
           type: "loop",
           drag: "free",
           focus: "center",
-          perPage: 5,
+          perPage: screenWidth >= 576 ? 5 : 2,
           pagination: false,
           gap: "20px",
         }}

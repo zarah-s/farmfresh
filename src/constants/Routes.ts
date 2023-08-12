@@ -1,11 +1,15 @@
 const home = "/";
 const about = "/about";
+const faq = "/faq";
+const recipies = "/recipies";
 
 
 
 const RoutesPath = {
     home,
-    about
+    about,
+    faq,
+    recipies
 
 }
 

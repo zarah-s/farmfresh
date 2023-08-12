@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Assets from "../../../../assets";
 
 const OurStory = () => {
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+
+  const handleScreenWidthChange = () => {
+    setScreenWidth(window.innerWidth);
+    // Perform any actions or updates based on the screen width change
+  };
+
+  useEffect(() => {
+    // Event listener for screen resize
+    window.addEventListener("resize", handleScreenWidthChange);
+
+    return () => {
+      // Cleanup the event listener when the component unmounts
+      window.removeEventListener("resize", handleScreenWidthChange);
+    };
+  }, []);
   return (
-    <div className="m-20">
-      <div className="grid grid-cols-2 items-center">
-        <div className="flex items-center justify-center">
-          <img src={Assets.OurStory} className="h-96" alt="" />
-        </div>
+    <div className="container mx-auto m-20">
+      <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 items-center">
+        {screenWidth >= 576 ? (
+          <div className="flex items-center justify-center">
+            <img src={Assets.OurStory} className="h-96" alt="" />
+          </div>
+        ) : null}
         <div className="">
           <h1 className="text-[#398796] font-[400] text-4xl">Our Story</h1>
           <p className="text-[#398796]">

@@ -37,7 +37,7 @@ const Intro = () => {
             width={1180}
             height={600}
             src={Assets.DeliveryVan}
-            className="w-[40rem] h-80"
+            className="w-full"
             alt=""
           />
         </motion.div>

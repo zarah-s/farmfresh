@@ -2,9 +2,9 @@ import Assets from "../../../assets";
 
 const Footer = () => {
   return (
-    <div className="bg-primary py-10">
-      <div className="container mx-auto px-20">
-        <div className="flex items-center justify-between">
+    <div id="contact" className="bg-primary py-10">
+      <div className="container mx-auto xl:px-20 lg:px-20 md:px-20 sm:px-0 xs:px-0">
+        <div className="flex flex-wrap items-center justify-between">
           <div className="flex items-center gap-5">
             <img src={Assets.LogoWhite} className="w-20 h-20" alt="" />
             <p className="text-white font-light">Integrated Dairies</p>
@@ -14,7 +14,7 @@ const Footer = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-4 mt-20 gap-5">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 mt-20 gap-5">
           <div className="text-white font-light">
             <h3 className="font-[600] mb-2">Know Us</h3>
             <ul>
@@ -59,7 +59,7 @@ const Footer = () => {
             <form>
               <input
                 type="text"
-                className="outline-none border-[1px] border-white rounded-xl bg-transparent p-2 text-white"
+                className="outline-none border-[1px] w-full border-white rounded-xl bg-transparent p-2 text-white"
                 placeholder="Contact"
                 name=""
                 id=""

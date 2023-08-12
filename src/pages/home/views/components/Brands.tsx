@@ -4,12 +4,15 @@ interface Props {
 }
 const Brands = ({ onTap }: Props) => {
   return (
-    <div className="grid grid-cols-3">
+    <div
+      id="brands"
+      className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2"
+    >
       <Brand onTap={onTap} imgSrc={Assets.Brand1} title="Stirred Yoghurt" />
       <Brand onTap={onTap} imgSrc={Assets.Brand2} title="Milk" />
       <Brand onTap={onTap} imgSrc={Assets.Brand3} title="Drinking Yoghurt" />
       <Brand onTap={onTap} imgSrc={Assets.Soon} title="Coming Soon" />
-      <Brand onTap={onTap} imgSrc={Assets.Brand3} title="Telsa" />
+      <Brand onTap={onTap} imgSrc={Assets.Brand4} title="Telsa" />
       <Brand onTap={onTap} imgSrc={Assets.Soon} title="Coming Soon" />
     </div>
   );

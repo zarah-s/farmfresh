@@ -11,13 +11,21 @@ const Carousel = () => {
 
       const interval = setInterval(() => {
         splideInstance?.go("+1");
-      }, 2000); // Adjust the interval (in milliseconds) as needed
+      }, 3000); // Adjust the interval (in milliseconds) as needed
 
       return () => {
         clearInterval(interval);
       };
     }
   }, []);
+  const carouselImages = [
+    Assets.Carousel_1,
+    Assets.Carousel_2,
+    Assets.Carousel_3,
+    Assets.Carousel_4,
+    Assets.Carousel_5,
+    Assets.Carousel_6,
+  ];
   return (
     <div className="">
       <Splide
@@ -32,11 +40,11 @@ const Carousel = () => {
         }}
         aria-label=""
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((item) => {
+        {[0, 1, 2, 3, 4, 5].map((item) => {
           return (
             <SplideSlide key={item} className="mx-3">
               <img
-                src={Assets.Brand3}
+                src={carouselImages[item]}
                 className="w-full h-[90vh] object-cover"
                 alt=""
               />

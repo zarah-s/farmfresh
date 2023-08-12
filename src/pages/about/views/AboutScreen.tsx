@@ -12,7 +12,7 @@ const AboutScreen = () => {
   return (
     <div>
       <NavBar activeTab="About" />
-
+      <div className="mt-20"></div>
       <Carousel />
       <CatchPhrase />
 

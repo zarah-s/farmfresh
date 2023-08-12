@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Assets from "../../../../assets";
+import { useNavigate } from "react-router-dom";
+import RoutesPath from "../../../../constants/Routes";
 const Recipies = () => {
   const splideRef = useRef<Splide | null>(null); // Add TypeScript type annotation
-
+  const navigate = useNavigate();
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
   const handleScreenWidthChange = () => {
@@ -36,7 +38,7 @@ const Recipies = () => {
     }
   }, []);
   return (
-    <div id="recipies" className="mt-20">
+    <div id="recipies" className="m-20">
       <h1 className="text-2xl text-primary text-center font-semibold">
         Recipies
       </h1>
@@ -69,7 +71,12 @@ const Recipies = () => {
                     distracted by the readable content of a page when looking at
                     its layout.
                   </p>
-                  <button className="bg-white shadow-lg text-primary w-full rounded-lg p-2 text-sm mt-3">
+                  <button
+                    onClick={() => {
+                      navigate(RoutesPath.recipies);
+                    }}
+                    className="bg-white shadow-lg text-primary w-full rounded-lg p-2 text-sm mt-3"
+                  >
                     Click
                   </button>
                 </div>

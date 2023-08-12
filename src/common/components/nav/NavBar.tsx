@@ -1,11 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Assets from "../../../assets";
 import RoutesPath from "../../../constants/Routes";
 import { useState } from "react";
 
 const NavBar = ({ activeTab }: { activeTab: string }) => {
   const [open, setOpen] = useState<boolean>(false);
-  const location = useLocation();
   return (
     <nav className="bg-[#45a3af] fixed top-0 w-full z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">

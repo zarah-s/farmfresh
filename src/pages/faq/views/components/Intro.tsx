@@ -2,9 +2,9 @@ import Assets from "../../../../assets";
 
 const Intro = () => {
   return (
-    <div className="relative w-full mt-20">
-      <img src={Assets.FAQBg} alt="" />
-      <div className="absolute top-0 w-full">
+    <div className="faq-bg py-10 md:h-[80vh] sm:bg-cover xs:bg-cover w-full mt-20">
+      {/* <img src={Assets.FAQBg} alt="" /> */}
+      <div className="">
         <div className="flex items-center justify-center flex-col mt-20">
           <h1 className="text-primary text-5xl font-medium">FAQs</h1>
           <p className="text-primary w-1/2 text-center mt-2">

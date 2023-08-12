@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Assets from "../../../assets";
+import RoutesPath from "../../../constants/Routes";
 
 const Footer = () => {
   return (
@@ -27,7 +29,9 @@ const Footer = () => {
           <div className="text-white font-light">
             <h3 className="font-[600] mb-2">Helpful Links</h3>
             <ul>
-              <li>FAQ</li>
+              <li>
+                <Link to={RoutesPath.faq}>FAQ</Link>
+              </li>
               <li>Legal</li>
               <li>Support</li>
               <li>Privacy</li>

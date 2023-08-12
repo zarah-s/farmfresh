@@ -36,3 +36,15 @@
     opacity: 1;
     /* Show the content */
 }
+
+.recipe-bg {
+    background-image: url(./assets/images/recipies/receipies_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.company-bg {
+    background-image: url(./assets/images/about/companyBanner.png);
+    background-size: 100% 100%;
+    background-repeat: contain;
+}

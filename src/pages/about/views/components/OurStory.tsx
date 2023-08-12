@@ -19,14 +19,14 @@ const OurStory = () => {
     };
   }, []);
   return (
-    <div className="container mx-auto m-20">
-      <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 items-center">
+    <div className=" m-20">
+      <div className="grid xl:grid-cols-2 lg:grid-cols-2 gap-5 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 items-center">
         {screenWidth >= 576 ? (
           <div className="flex items-center justify-center">
             <img src={Assets.OurStory} className="h-96" alt="" />
           </div>
         ) : null}
-        <div className="">
+        <div className="xl:px-0 lg:px-0 md:px-0 sm:px-3 xs:px-3 space-y-4">
           <h1 className="text-[#398796] font-[400] text-4xl">Our Story</h1>
           <p className="text-[#398796]">
             Susan was the first holstein cow brought from Fries-land to the farm

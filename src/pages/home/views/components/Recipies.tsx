@@ -4,7 +4,12 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Assets from "../../../../assets";
 import { useNavigate } from "react-router-dom";
 import RoutesPath from "../../../../constants/Routes";
-const Recipies = () => {
+import { Recipe } from "../../../../App";
+import ReactPlayer from "react-player";
+interface Props {
+  recipes: Recipe[];
+}
+const Recipies = ({ recipes }: Props) => {
   const splideRef = useRef<Splide | null>(null); // Add TypeScript type annotation
   const navigate = useNavigate();
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -30,7 +35,7 @@ const Recipies = () => {
 
       const interval = setInterval(() => {
         splideInstance?.go("+1");
-      }, 2000); // Adjust the interval (in milliseconds) as needed
+      }, 4000); // Adjust the interval (in milliseconds) as needed
 
       return () => {
         clearInterval(interval);
@@ -56,24 +61,32 @@ const Recipies = () => {
         }}
         aria-label=""
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((item) => {
+        {recipes.map((item, index) => {
           return (
-            <SplideSlide key={item} className="mx-3">
-              <div className="card">
-                <img
+            <SplideSlide key={item._id} className="mx-3">
+              <div className="card h-64">
+                {/* <video
+                  src={item.videoUrl}
+                  className="rounded-xl w-full h-64 object-cover"
+                ></video> */}
+                <ReactPlayer
+                  url={item.videoUrl}
+                  style={{
+                    height: "100%",
+                    borderRadius: "0.75rem",
+                    width: "100%",
+                  }}
+                />
+                {/* <img
                   src={Assets.Brand1}
                   className="rounded-xl w-full h-64 object-cover"
                   alt=""
-                />
+                /> */}
                 <div className="content">
-                  <p className="text-sm">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
-                  </p>
+                  <p className="text-sm">{item.description}</p>
                   <button
                     onClick={() => {
-                      navigate(RoutesPath.recipies);
+                      navigate(RoutesPath.recipies, { state: item });
                     }}
                     className="bg-white shadow-lg text-primary w-full rounded-lg p-2 text-sm mt-3"
                   >

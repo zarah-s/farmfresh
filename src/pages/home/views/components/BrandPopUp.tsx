@@ -8,8 +8,18 @@ interface Props {
   title: string;
   content: string;
   onClose: VoidFunction;
+  currentIndex: number;
+  onTap: Function;
 }
-const BrandPopUp = ({ content, images, open, title, onClose }: Props) => {
+const BrandPopUp = ({
+  content,
+  images,
+  open,
+  title,
+  onClose,
+  currentIndex,
+  onTap,
+}: Props) => {
   const splideRef = useRef<Splide | null>(null); // Add TypeScript type annotation
 
   useEffect(() => {
@@ -67,8 +77,11 @@ const BrandPopUp = ({ content, images, open, title, onClose }: Props) => {
             <div className="bg-[#39889769] p-3 rounded-xl">
               <div className="flex items-center justify-around">
                 <button
+                  onClick={() => {
+                    onTap(0);
+                  }}
                   className={
-                    true
+                    currentIndex === 0
                       ? "text-white font-[500] border-b-2 border-b-white"
                       : "text-[#398796]"
                   }
@@ -76,8 +89,11 @@ const BrandPopUp = ({ content, images, open, title, onClose }: Props) => {
                   Natural
                 </button>
                 <button
+                  onClick={() => {
+                    onTap(1);
+                  }}
                   className={
-                    false
+                    currentIndex === 1
                       ? "text-white font-[500] border-b-2 border-b-white"
                       : "text-[#398796]"
                   }
@@ -85,8 +101,11 @@ const BrandPopUp = ({ content, images, open, title, onClose }: Props) => {
                   Strawberry
                 </button>
                 <button
+                  onClick={() => {
+                    onTap(2);
+                  }}
                   className={
-                    false
+                    currentIndex === 2
                       ? "text-white font-[500] border-b-2 border-b-white"
                       : "text-[#398796]"
                   }
@@ -94,8 +113,11 @@ const BrandPopUp = ({ content, images, open, title, onClose }: Props) => {
                   Pineapple
                 </button>
                 <button
+                  onClick={() => {
+                    onTap(3);
+                  }}
                   className={
-                    false
+                    currentIndex === 3
                       ? "text-white font-[500] border-b-2 border-b-white"
                       : "text-[#398796]"
                   }

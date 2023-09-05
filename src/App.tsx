@@ -7,6 +7,7 @@ import Recipies from "./pages/recipies/views/Recipies";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import Assets from "./assets";
 
 export interface Recipe {
   _id: string;
@@ -20,6 +21,7 @@ export interface Recipe {
 }
 const App = () => {
   const [recipies, setRecipies] = useState<Recipe[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
 
   const fetchRecipies = async () => {
     try {
@@ -35,7 +37,23 @@ const App = () => {
 
   useEffect(() => {
     fetchRecipies();
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      setIsVisible(scrollTop > 100); // Adjust the scroll threshold as needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div>
@@ -45,6 +63,16 @@ const App = () => {
         <Route path={RoutesPath.faq} element={<FaqScreen />} />
         <Route path={RoutesPath.recipies} element={<Recipies />} />
       </Routes>
+      {isVisible ? (
+        <div className="fixed bottom-10 right-5">
+          <button
+            onClick={scrollToTop}
+            className="shadow-2xl rotate-180 p-3 bg-white rounded-full"
+          >
+            <Assets.Dropdown height={20} width={20} />
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 };

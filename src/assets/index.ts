@@ -15,6 +15,7 @@ import Carousel_4 from './images/about/carousel/4.jpg'
 import Carousel_5 from './images/about/carousel/5.jpg'
 import Carousel_6 from './images/about/carousel/6.jpg'
 import { ReactComponent as PlusIcon } from './icons/typcn_plus.svg'
+import { ReactComponent as Dropdown } from "./icons/dropdown.svg";
 import OurStory from './images/about/our_story.png'
 import Banner from './images/about/banner.png'
 import FAQBg from './images/faq/FAQBg.png'
@@ -59,7 +60,8 @@ const Assets = {
     Carousel_3,
     Carousel_4,
     Carousel_5,
-    Carousel_6
+    Carousel_6,
+    Dropdown
 }
 
 

@@ -90,7 +90,7 @@ const Recipies = ({ recipes }: Props) => {
                     }}
                     className="bg-white shadow-lg text-primary w-full rounded-lg p-2 text-sm mt-3"
                   >
-                    Click
+                    View
                   </button>
                 </div>
               </div>

@@ -24,6 +24,7 @@ const HomeScreen = ({ recipes }: Props) => {
       ingredients: [],
       steps: "",
       title: "Natural",
+      imageUrl: "",
       videoUrl: "",
     },
 
@@ -35,6 +36,7 @@ const HomeScreen = ({ recipes }: Props) => {
       duration: 676,
       ingredients: [],
       steps: "",
+      imageUrl: "",
       title: "Strawberry",
       videoUrl: "",
     },
@@ -46,6 +48,7 @@ const HomeScreen = ({ recipes }: Props) => {
       duration: 676,
       ingredients: [],
       steps: "",
+      imageUrl: "",
       title: "Pineapple",
       videoUrl: "",
     },
@@ -59,6 +62,7 @@ const HomeScreen = ({ recipes }: Props) => {
       steps: "",
       title: "Natural",
       videoUrl: "",
+      imageUrl: "",
     },
   ];
   const [currentIndex, setCurrentIndex] = useState<number>(0);

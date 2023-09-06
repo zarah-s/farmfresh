@@ -64,24 +64,24 @@ const Recipies = ({ recipes }: Props) => {
         {recipes.map((item, index) => {
           return (
             <SplideSlide key={item._id} className="mx-3">
-              <div className="card md:h-64 xxl:h-80 h-64">
+              <div className="card md:h-64 xxl:h-96 h-64">
                 {/* <video
                   src={item.videoUrl}
                   className="rounded-xl w-full h-64 object-cover"
                 ></video> */}
-                <ReactPlayer
+                {/* <ReactPlayer
                   url={item.videoUrl}
                   style={{
                     height: "100%",
                     borderRadius: "0.75rem",
                     width: "100%",
                   }}
-                />
-                {/* <img
-                  src={Assets.Brand1}
-                  className="rounded-xl w-full h-64 object-cover"
-                  alt=""
                 /> */}
+                <img
+                  src={item.imageUrl}
+                  className="rounded-xl w-full xxl:h-96 h-64 object-cover"
+                  alt=""
+                />
                 <div className="content">
                   <p className="text-sm">{item.description}</p>
                   <button

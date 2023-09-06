@@ -18,6 +18,7 @@ export interface Recipe {
   videoUrl: string;
   category: string;
   steps: string;
+  imageUrl: string;
 }
 const App = () => {
   const [recipies, setRecipies] = useState<Recipe[]>([]);

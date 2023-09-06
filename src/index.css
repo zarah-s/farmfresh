@@ -46,11 +46,11 @@
 .company-bg {
     background-image: url(./assets/images/about/companyBanner.png);
     background-size: 100% 100%;
-    background-repeat: contain;
+    background-repeat: no-repeat;
 }
 
 .faq-bg {
     background-image: url(./assets/images/faq/FAQBg.png);
     background-size: 100% 100%;
-    background-repeat: contain;
+    background-repeat: no-repeat;
 }

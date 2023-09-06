@@ -27,12 +27,20 @@ interface BrandProps {
 }
 const Brand = ({ imgSrc, title, onTap }: BrandProps) => {
   return imgSrc === Assets.Soon ? (
-    <div onClick={onTap} className="relative h-80">
-      <img src={imgSrc} className="h-80 object-cover w-full" alt="" />
+    <div onClick={onTap} className="relative xl:h-80 xxl:h-96">
+      <img
+        src={imgSrc}
+        className="xl:h-80 xxl:h-96 object-cover w-full"
+        alt=""
+      />
     </div>
   ) : (
-    <div onClick={onTap} className="relative h-80">
-      <img src={imgSrc} className="h-80 object-cover w-full" alt="" />
+    <div onClick={onTap} className="relative xl:h-80 xxl:h-96">
+      <img
+        src={imgSrc}
+        className="xl:h-80 xxl:h-96 object-cover w-full"
+        alt=""
+      />
       <div className="absolute bg-primary-transparent top-0 h-full w-full">
         <div className="flex h-full items-center justify-center">
           <h1 className="text-white font-semibold text-3xl">{title}</h1>

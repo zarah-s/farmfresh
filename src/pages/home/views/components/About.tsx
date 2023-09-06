@@ -51,7 +51,7 @@ const About = () => {
               }}
               className="bg-primary xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-full xs:w-full p-3 text-white rounded-lg "
             >
-              Click Me
+              Read More...
             </button>
           </div>
         </div>

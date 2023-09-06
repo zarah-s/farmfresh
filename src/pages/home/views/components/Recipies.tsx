@@ -43,7 +43,7 @@ const Recipies = ({ recipes }: Props) => {
     }
   }, []);
   return (
-    <div id="recipies" className="m-20">
+    <div id="recipies" className="md:m-20">
       <h1 className="text-2xl text-primary text-center font-semibold">
         Recipies
       </h1>
@@ -64,7 +64,7 @@ const Recipies = ({ recipes }: Props) => {
         {recipes.map((item, index) => {
           return (
             <SplideSlide key={item._id} className="mx-3">
-              <div className="card h-64">
+              <div className="card md:h-64 xxl:h-80 h-64">
                 {/* <video
                   src={item.videoUrl}
                   className="rounded-xl w-full h-64 object-cover"

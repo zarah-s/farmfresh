@@ -30,7 +30,7 @@ const Recipies = () => {
             <h1 className="text-5xl mb-5 font-[400] text-primary text-center">
               Recipes for Farmfresh lovers
             </h1>
-            <div className="bg-white w-full shadow-xl rounded-xl xl:p-10 lg:p-10 md:p-10 sm:p-5 xs:p-5 xl:space-x-10 lg:space-x-10 md:space-x-10 sm:space-x-0 xs:space-x-0 xl:space-y-0 lf:space-y-0 md:space-y-0 sm:space-y-20 xs:space-y-20  grid grid-cols-12">
+            <div className="bg-white w-full  shadow-xl rounded-xl xl:p-10 lg:p-10 md:p-10 sm:p-5 xs:p-5 xl:space-x-10 lg:space-x-10 md:space-x-10 sm:space-x-0 xs:space-x-0 xl:space-y-0 lf:space-y-0 md:space-y-0 sm:space-y-20 xs:space-y-20  grid grid-cols-12">
               <div className="xl:col-span-5 lg:col-span-5 md:col-span-5 sm:col-span-12 xs:col-span-12">
                 <div className="w-full xl:h-96 lg:h-96 flex md:h-64 sm:h-72 xs:h-72 rounded-lg">
                   <ReactPlayer

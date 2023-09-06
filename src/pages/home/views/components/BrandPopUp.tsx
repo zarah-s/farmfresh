@@ -46,7 +46,7 @@ const BrandPopUp = ({
       open={open}
       onClose={onClose}
     >
-      <div className="bg-white shadow-lg mx-20 rounded-xl p-10">
+      <div className="bg-white h-[70vh] shadow-lg mx-20 rounded-xl p-10">
         <div className="grid grid-cols-12 gap-10">
           <div className="col-span-3">
             <Splide

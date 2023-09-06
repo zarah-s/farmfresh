@@ -25,6 +25,8 @@ module.exports = {
       // => @media (min-width: 992px) { ... }
 
       xl: "1200px",
+      xxl: '1560px'
+
     },
 
   },

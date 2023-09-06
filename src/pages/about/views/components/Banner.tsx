@@ -4,7 +4,7 @@ import Assets from "../../../../assets";
 const Banner = () => {
   return (
     <div className="w-full mt-20">
-      <img src={Assets.Banner} alt="" />
+      <img src={Assets.Banner} className="w-full" alt="" />
     </div>
   );
 };

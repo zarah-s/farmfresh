@@ -6,7 +6,9 @@ interface Props {
   open: boolean;
   images: any[];
   title: string;
+  titles: string[];
   content: string;
+  ingredients: string[];
   onClose: VoidFunction;
   currentIndex: number;
   onTap: Function;
@@ -19,6 +21,8 @@ const BrandPopUp = ({
   onClose,
   currentIndex,
   onTap,
+  ingredients,
+  titles,
 }: Props) => {
   const splideRef = useRef<Splide | null>(null); // Add TypeScript type annotation
 
@@ -34,7 +38,7 @@ const BrandPopUp = ({
         clearInterval(interval);
       };
     }
-  }, []);
+  }, [currentIndex]);
   return (
     <Popup
       lockScroll
@@ -48,7 +52,7 @@ const BrandPopUp = ({
     >
       <div className="bg-white h-[70vh] shadow-lg mx-20 rounded-xl p-10">
         <div className="grid grid-cols-12 gap-10">
-          <div className="col-span-3">
+          <div className="col-span-4">
             <Splide
               ref={splideRef}
               options={{
@@ -62,10 +66,10 @@ const BrandPopUp = ({
             >
               {images.map((item: any, index: number) => {
                 return (
-                  <SplideSlide key={item} className="mx-3">
+                  <SplideSlide key={index} className="mx-3">
                     <img
                       src={item}
-                      className="w-full h-80 object-cover rounded-lg"
+                      className="w-full h-96 object-cover rounded-lg"
                       alt=""
                     />
                   </SplideSlide>
@@ -73,22 +77,28 @@ const BrandPopUp = ({
               })}
             </Splide>
           </div>
-          <div className="col-span-9">
+          <div className="col-span-8">
             <div className="bg-[#39889769] p-3 rounded-xl">
               <div className="flex items-center justify-around">
-                <button
-                  onClick={() => {
-                    onTap(0);
-                  }}
-                  className={
-                    currentIndex === 0
-                      ? "text-white font-[500] border-b-2 border-b-white"
-                      : "text-[#398796]"
-                  }
-                >
-                  Natural
-                </button>
-                <button
+                {titles.map((item, index) => {
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        onTap(index);
+                      }}
+                      className={
+                        currentIndex === index
+                          ? "text-white font-[500] border-b-2 border-b-white"
+                          : "text-[#398796]"
+                      }
+                    >
+                      {item}
+                    </button>
+                  );
+                })}
+
+                {/* <button
                   onClick={() => {
                     onTap(1);
                   }}
@@ -111,26 +121,17 @@ const BrandPopUp = ({
                   }
                 >
                   Pineapple
-                </button>
-                <button
-                  onClick={() => {
-                    onTap(3);
-                  }}
-                  className={
-                    currentIndex === 3
-                      ? "text-white font-[500] border-b-2 border-b-white"
-                      : "text-[#398796]"
-                  }
-                >
-                  Natural
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="my-10 mx-10">
-              <h1 className="text-[#398796] font-[400] text-center text-3xl">
-                {title}
-              </h1>
+              <h1 className="text-[#398796] font-[400] text-3xl">{title}</h1>
               <p className="text-[#398796] mt-5">{content}</p>
+              <div className="my-10"></div>
+              <h1 className="text-[#398796] font-[400] text-3xl">
+                Ingredients
+              </h1>
+              <p className="text-[#398796] mt-5">{ingredients[0]}</p>
             </div>
           </div>
         </div>

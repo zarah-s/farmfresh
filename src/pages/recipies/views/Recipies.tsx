@@ -32,20 +32,20 @@ const Recipies = () => {
             </h1>
             <div className="bg-white w-full  shadow-xl rounded-xl xl:p-10 lg:p-10 md:p-10 sm:p-5 xs:p-5 xl:space-x-10 lg:space-x-10 md:space-x-10 sm:space-x-0 xs:space-x-0 xl:space-y-0 lf:space-y-0 md:space-y-0 sm:space-y-20 xs:space-y-20  grid grid-cols-12">
               <div className="xl:col-span-5 lg:col-span-5 md:col-span-5 sm:col-span-12 xs:col-span-12">
-                <div className="w-full xl:h-96 lg:h-96 flex md:h-64 sm:h-72 xs:h-72 rounded-lg">
-                  <ReactPlayer
+                {/* <div className="w-full xl:h-96 lg:h-96 flex md:h-64 sm:h-72 xs:h-72 rounded-lg"> */}
+                {/* <ReactPlayer
                     url={recipe?.videoUrl}
                     style={{
                       width: "100%",
                       borderRadius: "0.5rem",
                     }}
-                  />
-                </div>
-                {/* <iframe
+                  /> */}
+                {/* </div> */}
+                <iframe
                   src="https://drive.google.com/file/d/1Nd47PO2wgJfNWU-b4kTPzzbnwxWFZ0KR/preview"
                   className="w-full xl:h-96 lg:h-96 md:h-64 sm:h-72 xs:h-72 rounded-lg"
                   allow="autoplay"
-                ></iframe> */}
+                ></iframe>
               </div>
               <div className="xl:col-span-7 lg:col-span-7 md:col-span-7 sm:col-span-12 xs:col-span-12">
                 <div className="flex flex-wrap items-center gap-10 justify-between">

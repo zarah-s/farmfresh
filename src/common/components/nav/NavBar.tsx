@@ -99,7 +99,7 @@ const NavBar = ({ activeTab }: { activeTab: string }) => {
                 } text-lg text-white`}
                 aria-current="page"
               >
-                Distributors
+                Distributor
               </a>
             </li>
             <li>

@@ -23,7 +23,15 @@ const OurStory = () => {
       <div className="grid xl:grid-cols-2 lg:grid-cols-2 gap-5 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 items-center">
         {screenWidth >= 576 ? (
           <div className="flex items-center justify-center">
-            <img src={Assets.OurStory} className="h-96" alt="" />
+            <video
+              src="/story.mp4"
+              className="h-96 rounded-lg"
+              controls
+              autoPlay
+              muted
+              loop
+            ></video>
+            {/* <img src={Assets.OurStory} className="h-96" alt="" /> */}
           </div>
         ) : null}
         <div className="xl:px-0 lg:px-0 md:px-0 sm:px-3 xs:px-3 space-y-4">

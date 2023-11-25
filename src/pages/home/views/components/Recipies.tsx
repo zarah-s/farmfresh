@@ -64,7 +64,12 @@ const Recipies = ({ recipes }: Props) => {
         {recipes.map((item, index) => {
           return (
             <SplideSlide key={item._id} className="mx-3">
-              <div className="card md:h-64 xxl:h-96 h-64">
+              <div
+                onClick={() => {
+                  navigate(RoutesPath.recipies, { state: item });
+                }}
+                className="card md:h-64 xxl:h-96 h-64"
+              >
                 {/* <video
                   src={item.videoUrl}
                   className="rounded-xl w-full h-64 object-cover"
@@ -83,7 +88,7 @@ const Recipies = ({ recipes }: Props) => {
                   alt=""
                 />
                 <div className="content">
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm">{item.title}</p>
                   <button
                     onClick={() => {
                       navigate(RoutesPath.recipies, { state: item });

@@ -90,7 +90,7 @@ It comes in 1L pack size.
           `,
         ingredients: ["Fresh cow’s milk"],
         steps: "",
-        title: "Natural",
+        title: "Full Cream Milk",
         imageUrl: "",
         videoUrl: "",
       },
@@ -236,6 +236,48 @@ your mango ﬁx even when mango is out of season.
         videoUrl: "",
       },
     ],
+    [
+      {
+        _id: Math.floor(Math.random() * 99999).toString(),
+        category: "farmfresh",
+        description: `
+        Savor the perfect blend of rich, creamy Greek yoghurt complemented by a
+touch of natural sweetness. Crafted with care, this indulgent treat strikes a
+balance between delightful flavor and nourishing goodness. Whether
+enjoyed as a wholesome snack or incorporated into your favorite recipes,
+Farmfresh Sweetened Greek Yoghurt adds a touch of luxury to your daily
+routine. Experience the joy of a satisfying and nourishing delight that’s
+ready to enhance your culinary adventures and promote a balanced
+lifestyle.It comes in 400g Tub size.
+          `,
+        ingredients: ["Fresh cow’s milk"],
+        steps: "",
+        title: "Sweetened Greek Yoghurt",
+        imageUrl: "",
+        videoUrl: "",
+      },
+
+      {
+        _id: Math.floor(Math.random() * 99999).toString(),
+        category: "farmfresh",
+        description: `
+Elevate your taste experience with this wholesome delight that’s crafted to
+perfection. Our Greek yoghurt stands as a true embodiment of quality,
+made without any added sugars for a pure, authentic flavor. Indulge in the
+creamy richness and smooth texture that Farmfresh brings to every
+spoonful. Packed with natural goodness, this yoghurt offers a versatile
+foundation for your culinary creations and healthy lifestyle. Whether
+enjoyed on its own or as a versatile ingredient, Farmfresh Unsweetened
+Greek Yoghurt is your go-to choice for a guilt-free, delicious treat that’s both
+nourishing and delightful.It comes in 400g Tub size.
+          `,
+        ingredients: ["Fresh cow’s milk"],
+        steps: "",
+        title: "Unsweetened Greek Yoghurt",
+        imageUrl: "",
+        videoUrl: "",
+      },
+    ],
   ];
 
   const images = [
@@ -317,6 +359,7 @@ your mango ﬁx even when mango is out of season.
         Assets.DrinkingYoghourtBrand.mango.DrinkingYoghourtMangoFive,
       ],
     ],
+    [[Assets.Tesla.TeslaSweetened], [Assets.Tesla.TeslaUnsweetened]],
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);

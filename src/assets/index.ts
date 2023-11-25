@@ -20,7 +20,7 @@ import OurStory from './images/about/our_story.png'
 import Banner from './images/about/banner.png'
 import FAQBg from './images/faq/FAQBg.png'
 import CompanyBanner from './images/about/companyBanner.png'
-import GridItems from './images/about/gridItems.jpg'
+import GridItems from './images/about/gridItems.png'
 import MedicalAssociation from './images/products/Medical Association.png'
 import Nopreservatives from './images/products/Nopreservatives.png'
 import Probiotics from './images/products/Probiotics.png'
@@ -118,7 +118,16 @@ import DrinkingYoghourtPineappleFour from './images/brands/Drinking Yoghurt/Pine
 import DrinkingYoghourtPineappleFive from './images/brands/Drinking Yoghurt/Pineapple/DAEF022D-EEEB-4149-B4E4-F18B9CEC1A79.jpg'
 
 
+import TeslaSweetened from './images/brands/tesla/sweetened.jpg'
+import TeslaUnsweetened from './images/brands/tesla/unsweetened.jpg'
 
+
+
+
+const Tesla = {
+    TeslaSweetened,
+    TeslaUnsweetened,
+}
 
 
 const StirredBrand = {
@@ -243,6 +252,7 @@ const Assets = {
     StirredBrand,
     MilkBrand,
     DrinkingYoghourtBrand,
+    Tesla,
     Berries,
     Yo_intro,
     Yo_intro1,

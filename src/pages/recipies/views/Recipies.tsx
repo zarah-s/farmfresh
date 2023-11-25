@@ -42,7 +42,7 @@ const Recipies = () => {
                   /> */}
                 {/* </div> */}
                 <iframe
-                  src="https://drive.google.com/file/d/1Nd47PO2wgJfNWU-b4kTPzzbnwxWFZ0KR/preview"
+                  src={recipe?.videoUrl}
                   className="w-full xl:h-96 lg:h-96 md:h-64 sm:h-72 xs:h-72 rounded-lg"
                   allow="autoplay"
                 ></iframe>

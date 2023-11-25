@@ -44,10 +44,10 @@ const Brands = ({ onTap }: Props) => {
         />
         <Brand
           onTap={() => {
-            onTap(0);
+            onTap(4);
           }}
           imgSrc={Assets.Brand4}
-          title="Telsa"
+          title="Greek Yoghurt"
         />
         <Brand
           onTap={() => {

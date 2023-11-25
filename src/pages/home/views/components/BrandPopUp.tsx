@@ -50,7 +50,7 @@ const BrandPopUp = ({
       open={open}
       onClose={onClose}
     >
-      <div className="bg-white h-[70vh] shadow-lg mx-20 rounded-xl p-10">
+      <div className="bg-white min-h-[70vh] relative shadow-lg mx-20 rounded-xl p-10">
         <div className="grid grid-cols-12 gap-10">
           <div className="col-span-4">
             <Splide
@@ -134,6 +134,15 @@ const BrandPopUp = ({
               <p className="text-[#398796] mt-5">{ingredients[0]}</p>
             </div>
           </div>
+        </div>
+        <div className="absolute bottom-10 right-10">
+          <a
+            href="https://farmfreshng.com/"
+            target="_blank"
+            className="bg-primary px-5 py-2 rounded-lg text-white"
+          >
+            shop now
+          </a>
         </div>
       </div>
     </Popup>
